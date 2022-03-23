@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/Http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { CursoComponent } from './curso/curso.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CursoComponent
   ],
   imports: [
     BrowserModule,
