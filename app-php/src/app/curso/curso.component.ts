@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class CursoComponent implements OnInit {
 
   nome:string = 'carlos';
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
 
   //Inicializador
