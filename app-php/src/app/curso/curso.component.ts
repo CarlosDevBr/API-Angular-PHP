@@ -17,4 +17,24 @@ export class CursoComponent implements OnInit {
     
   }
 
+
+  //Cadastro
+  cadastro():void{
+    alert('Cadastro');
+  }
+
+  //Seleção
+  selecao():void{
+    alert('Seleção');
+  }
+
+  //Alterar
+  alterar():void{
+    alert('Alterar');
+  }
+
+  //Remover
+  remover():void{
+    alert('Remover');
+  }
 }
