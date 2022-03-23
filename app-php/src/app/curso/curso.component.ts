@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursoComponent implements OnInit {
 
+  nome:string = 'carlos';
+
   constructor() { }
 
+
+  //Inicializador
   ngOnInit(): void {
+    
   }
 
 }
