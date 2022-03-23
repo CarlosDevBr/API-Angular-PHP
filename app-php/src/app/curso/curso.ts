@@ -1,8 +1,8 @@
 //Classe
-export class curso{
+export class Curso{
 
     //Construtor
     constructor(nomeCurso:string, valorCurso:number, idCurso?:number){
-        
+
     }
 }
