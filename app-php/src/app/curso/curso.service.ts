@@ -37,11 +37,11 @@ export class CursoService {
   }
 
   //Remover curso
-  removerCurso(c:Curso):observable<Curso[]>{
+  removerCurso(c:Curso):Observable<Curso[]>{
 
     const param = new HttpParams().set("idCurso", c.idCurso?.toString());
 
-    return this.http.delete(this.url+'excluir', {params:params})
+    return this.http.delete(this.url+'excluir', {params:param})
     .pipe(map((res) => {
 
       const filtro = this.vetor.filter((curso) => {

@@ -59,7 +59,14 @@ export class CursoComponent implements OnInit {
   }
 
   //Remover
-  remover():void{
-    alert('Remover');
+  remover(){
+    this.curso_servico.removerCurso(this.curso).subscribe(
+      (res:Curso[]) => {
+        this.vetor = res;
+
+        this.curso.nomeCurso = "";
+        this.curso.valorCurso = 0;
+      }
+    )
   }
 }
