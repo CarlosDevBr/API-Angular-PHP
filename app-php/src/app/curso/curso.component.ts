@@ -69,4 +69,11 @@ export class CursoComponent implements OnInit {
       }
     )
   }
+
+  //Selecionar curso específico
+  selecionarCurso(c:Curso){
+    this.curso.idCurso = c.idCurso;
+    this.curso.nomeCurso = c.nomeCurso;
+    this.curso.valorCurso = c.valorCurso;
+  }
 }
