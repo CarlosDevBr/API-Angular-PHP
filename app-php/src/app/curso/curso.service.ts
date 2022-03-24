@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 import { map } from 'rxjs/operators';
 import { Curso } from './curso';
 
@@ -50,6 +49,29 @@ export class CursoService {
 
       return this.vetor = filtro;
 
+    }))
+  }
+
+  //Atualizar curso
+  atualizarCurso(c:Curso):Observable<Curso[]>{
+
+    //Executa a alteração via URL
+    return this.http.put(this.url+'alterar', {cursos: c})
+
+    //Percorre o vetor para saber qual é o id do curso alterado
+    .pipe(map((res) => {
+      const cursoAlterado = this.vetor.find((item) => {
+        return +item['idCurso'] === +['idCurso'];
+      });
+
+      //Altero o valor do vetor local
+      if(cursoAlterado){
+        cursoAlterado['nomeCurso'] = c['nomeCurso'];
+        cursoAlterado['valorCurso'] = c['valorCurso'];
+      }
+
+      //Retorno
+      return this.vetor;
     }))
   }
 }
