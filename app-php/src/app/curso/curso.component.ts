@@ -16,6 +16,9 @@ export class CursoComponent implements OnInit {
   //Vetor
   vetor!:Curso[];
 
+  //Objeto da classe Curso
+  curso = new Curso();
+
   //Inicializador
   ngOnInit(): void {
     //Ao iniciar o sistema devera listar os cursos
