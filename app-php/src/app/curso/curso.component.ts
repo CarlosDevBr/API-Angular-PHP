@@ -35,8 +35,8 @@ export class CursoComponent implements OnInit {
         this.vetor = res;
 
         //Limpar os atributos
-        this.curso.nomeCurso = null;
-        this.curso.valorCurso = null;
+        this.curso.nomeCurso = '';
+        this.curso.valorCurso = 0;
 
         //Atualizar a listagem
         this.selecao();

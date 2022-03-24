@@ -1,3 +1,18 @@
+<!-- Formulario -->
+<form action="">
+    <label>Curso</label>
+    <input type="text" name="nomeCurso" [(ngModel)]="curso.nomeCurso">
+    <br>
+
+    <label>Valor</label>
+    <input type="text" name="valorCurso" [(ngModel)]="curso.valorCurso">
+    <br>
+
+    <button (click)="cadastro(this.curso)">Cadastrar</button>
+    <button>Alterar</button>
+    <button>Excluir</button>
+
+
 <!-- Tabela -->
 <table border="1">
     <tr *ngFor="let v of vetor">
